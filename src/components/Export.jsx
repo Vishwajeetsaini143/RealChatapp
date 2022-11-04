@@ -17,7 +17,7 @@ const Export = () => {
   }, [currentUser.uid, data.combineId]);
 
   const getChats = () => {
-    const unsub = onSnapshot(doc(db, "userChats", data.combineId), (doc) => {
+    const unsub = onSnapshot(doc(db, "userChats", "QhfQE3C8oqZ1kmPm7FKtxuciNsx2NFgMqXR5YOak8es1N2VwYAUpov62"), (doc) => {
       setMessages(doc.data());
       console.log("doc data runn", doc.data());
     });
