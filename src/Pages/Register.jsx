@@ -47,9 +47,8 @@ const Register = () => {
               email,
               photoURL: downloadURL,
             });
-            
+
             navigate("/");
-           
           });
         }
       );

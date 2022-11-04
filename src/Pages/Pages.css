@@ -46,11 +46,16 @@ input::placeholder{
     color: rgb(175, 175, 175);
 }
 button{
-    background-color: #7b96ec;
+    /* background-color: #7b96ec;
     color-scheme: #fff;
-    padding: 10px;
+    padding: 10px; */
     border: none;
     cursor: pointer;
+    background: linear-gradient(to left,blue,rgb(0, 255, 149));
+    border-radius: 10px ;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
 }
 p{
     color: #5d5b8d;
@@ -71,18 +76,29 @@ label{
     font-size: 23px;
 }
 .home{
-    background-color: #a7bcff;
+    /* background-color: #a7bcff; */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(to left,blue,rgb(0, 255, 149));
+    /* border-radius: 10px ;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold; */
 }
 .container{
-    border: 1px solid #fff;
-    border-radius: 10px;
+    /* border: 1px solid #fff; */
+    box-shadow: 0 0 15px rgba(145, 137, 137, 10);
+    border-radius: 15px;
     width: 65%;
     height: 80%;
     display: flex;
     overflow: hidden;
+    background: linear-gradient(to left,rgb(0, 255, 149),blue);
+    border-radius: 10px ;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
     
 }

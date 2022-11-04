@@ -23,7 +23,7 @@ const Message = ({messages}) => {
         <span>just now</span>
       </div>
       <div className='messageContent'>
-        <p>{messages.text}</p>
+        <p>{messages?.text}</p>
         {messages.img && <img src={messages.img} alt=''/>}
 
       </div>
