@@ -198,6 +198,7 @@ img{
 } */
 .chatIcons{
     margin-right: 40px;
+    text-align: center;
 }
 /* .export-card button{
     background: linear-gradient(to left,blue,rgb(0, 255, 149));
