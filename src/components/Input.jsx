@@ -54,6 +54,8 @@ const Input = () => {
         }),
       });
     } 
+    setText("");
+    setImg(null);
     await updateDoc(doc(db, "userChats", currentUser.uid), {
       [data.chatId + ".lastMessage"]: {
         text,
