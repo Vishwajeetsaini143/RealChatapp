@@ -97,7 +97,7 @@ img{
     background-color: #ddddf7;
     padding: 10px;
     height: calc(100%  - 160px);
-    overflow-y: scroll;
+    overflow: scroll;
     /* height: 400px; */
 }
 .input{
@@ -191,23 +191,12 @@ img{
     width: 100%;
    
 }
-/* .chatIcons .Export-icons{
-    position: relative;
-  
-  
-} */
+
 .chatIcons{
     margin-right: 40px;
     text-align: center;
 }
-/* .export-card button{
-    background: linear-gradient(to left,blue,rgb(0, 255, 149));
-    border-radius: 10px ;
-    padding: 8px;
-    font-size: 15px;
-    font-weight: bold;
-    color: #fff;
-} */
+
 .chats{
     background: linear-gradient(to left,blue,rgb(0, 255, 149));
 }
