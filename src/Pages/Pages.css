@@ -87,13 +87,14 @@ label{
     box-shadow: 0 0 15px rgba(145, 137, 137, 10);
     border-radius: 15px;
     width: 65%;
-    height: 80%;
+    height: 78vh;
     display: flex;
-    overflow: hidden;
+  
     background: linear-gradient(to left,rgb(0, 255, 149),blue);
     border-radius: 10px ;
     padding: 8px;
     font-size: 15px;
     font-weight: bold;
+    /* position: relative; */
     
 }

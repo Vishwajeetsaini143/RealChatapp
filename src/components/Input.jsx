@@ -72,7 +72,7 @@ const Input = () => {
     setImg(null);
   }; 
   return (
-    <div className="input">
+    <div className="input input-wraper">
       <input
         type="text"
         placeholder="Type something..."
