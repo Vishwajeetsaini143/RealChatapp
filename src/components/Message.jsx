@@ -4,7 +4,7 @@ import { ChatContext } from '../context/ChatContext'
 import { useRef } from 'react'
 import { useContext ,useEffect} from 'react'
 const Message = ({messages}) => {
-  console.log("me",messages.senderId)
+ 
   const {currentUser}=useContext(AuthContext) 
   const {data}=useContext(ChatContext)
   const ref=useRef()

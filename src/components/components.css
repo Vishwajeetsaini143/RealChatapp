@@ -104,9 +104,9 @@ img{
 .message-box{
     /* background-color: red; */
     height:75vh ;
-    overflow-y:auto ;
+    overflow-y:scroll ;
     background-color: #ddddf7;
-    padding: 13px;
+
 
 
 }
@@ -116,15 +116,23 @@ img{
     height: 24px;
     cursor: pointer;
 }
+.messages-container{
+   
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+
+}
 .messages{
     background-color: #ddddf7;
     padding: 10px;
     
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
    
     width: 100%;
     
-    
+    margin-top: 100px;
  
 }
 .input{
@@ -184,6 +192,7 @@ img{
     flex-direction: column;
     color: gray;
     font-weight: 300;
+    
 }
 .messageInfo img{
     width: 40px;
@@ -214,6 +223,7 @@ img{
 }
 .message.owner{
     flex-direction: row-reverse;
+  
 }
 /* .chatIcons .export-card{
     right: 12px;

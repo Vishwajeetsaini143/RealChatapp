@@ -22,7 +22,7 @@ const Messages = () => {
 
  
   return (
-    <div className="">
+    <div className="messages-container">
       {messages?.map((m) => (
         <Message messages={m} key={m.id} />
       ))}

@@ -17,7 +17,7 @@ const Chats = () => {
         doc(db, "userChats", currentUser?.uid),
         (doc) => {
           setChats(doc.data());
-          console.log("data", doc.data());
+          
         }
       );
 
@@ -27,7 +27,7 @@ const Chats = () => {
     };
     currentUser.uid && getChats();
   }, [currentUser.uid]);
-  console.log("get", Object.entries.chats);
+
   const handleSelect = (u) => {
    
     dispatch({ type: "CHANGE_USER", payload: u });
