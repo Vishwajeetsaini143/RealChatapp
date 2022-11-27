@@ -86,7 +86,6 @@ setMessages(processData);
     });
     const blob = new Blob([file], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
-    console.log("blob",blob)
     const link = document.createElement("a");
     link.download = "user-info.txt";
     link.href = url;

@@ -32,9 +32,12 @@ const Chats = () => {
    
     dispatch({ type: "CHANGE_USER", payload: u });
   };
+  //  const time = new Date(Object.values(chats)[0].date?.seconds* 1000).toLocaleTimeString().slice(0,4);
+  //  console.log("time",time)
+ 
   return (
     <div className="chats">
-      {Object.entries(chats).length>0 &&  Object.entries(chats)
+      {chats?.length>0 &&  Object.entries(chats)
         ?.sort((a, b) => b[1].date - a[1].date)
         .map((chat) => (
           <div

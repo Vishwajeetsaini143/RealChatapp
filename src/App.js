@@ -11,6 +11,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
+// import Otp from "./components/Otp";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -34,6 +35,7 @@ function App() {
        
         </Routes>
       </BrowserRouter>
+      {/* <Otp/> */}
     </div>
   );
 }

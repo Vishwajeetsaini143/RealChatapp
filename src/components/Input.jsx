@@ -6,6 +6,7 @@ import { ChatContext } from "../context/ChatContext";
 import { AuthContext } from "../context/AuthContext";
 import { useContext } from "react";
 import { useState } from "react";
+import VoiceToText from "../components/VoiceToText"
 import {
   arrayUnion,
   doc,
@@ -16,6 +17,7 @@ import {
 import { db, storage } from "../firbase";
 import { v4 as uuid } from "uuid";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+
 
 const Input = () => {
   const [text, setText] = useState("");
@@ -80,6 +82,12 @@ const Input = () => {
         value={text}
       />
       <div className="send">
+      {/* <label >
+          <div className="icon-mic">
+            
+          <VoiceToText/>
+          </div>
+        </label> */}
         <div className="icon-img">
           <IoMdAttach />
         </div>
@@ -95,6 +103,7 @@ const Input = () => {
             <GrGallery />
           </div>
         </label>
+     
         <button onClick={handleSand}>Send</button>
       </div>
     </div>

@@ -10,6 +10,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "../firbase";
 import { useNavigate, Link } from "react-router-dom";
 const Register = () => {
+  const [isDisabled,setIsDisabled]=useState(false)
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
   const handelSubmit = async (e) => {
@@ -17,9 +18,17 @@ const Register = () => {
     alert("click");
     // console.log(e.target[0].value)
     const displayName = e.target[0].value;
+
     const email = e.target[1].value;
     const password = e.target[2].value;
     const file = e.target[3].files[0];
+    if(displayName==="" && email==="" && password===""&& file===""){
+      console.log("email",email,password,file,displayName)
+      setIsDisabled(true)
+      
+    }else{
+      setIsDisabled(false)
+    }
 
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
@@ -75,9 +84,10 @@ const Register = () => {
 
           <button>Sign up</button>
           {err && <span>Something went wrong</span>}
+          {isDisabled &&<span>All fild requred</span>}
         </form>
         <p>
-          you do have an account?<Link to="/login">Login</Link>{" "}
+          you do have an account?<Link to="/login">Login</Link>
         </p>
       </div>
     </div>

@@ -12,6 +12,9 @@ const Message = ({messages}) => {
   useEffect(() => {
     ref.current?.scrollIntoView({behavior:"smooth"})
   }, [messages])
+  console.log("msg",messages)
+  const time = new Date(messages?.date.seconds* 1000).toLocaleTimeString().slice(0,5);
+  
   
   return (
     <div
@@ -20,7 +23,8 @@ const Message = ({messages}) => {
       <div className='messageInfo'>
       
         <img src={messages.senderId===currentUser.uid? currentUser.photoURL:data.user.photoURL} alt=''/> 
-        <span>just now</span>
+        
+        <span>{time}</span>
       </div>
       <div className='messageContent'>
         <p>{messages?.text}</p>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState} from "react";
+import { useState } from "react";
 import "./components.css";
 import {
   collection,
@@ -43,28 +43,23 @@ const Search = () => {
   };
   let combinedId;
 
+  // useEffect(()=>{
+  //   dispatch({ type: "SELECT_USER_ID", payload: combinedId });
 
-// useEffect(()=>{
-//   dispatch({ type: "SELECT_USER_ID", payload: combinedId });
-    
-
-// },[])
-
-
+  // },[])
 
   const handleSelect = async () => {
     //check whether the group (chats in firestore) exists,if not create
-     combinedId =
+    combinedId =
       currentUser.uid > user.uid
         ? currentUser.uid + user.uid
         : user.uid + currentUser.uid;
-       
-  
+
     try {
       const res = await getDoc(doc(db, "Chats", combinedId));
       console.log("yes", res);
-     dispatch({ type: "SELECT_ID", payload: combinedId });
-
+      dispatch({ type: "SELECT_ID", payload: combinedId });
+      console.log("res", res.exists());
       if (!res.exists()) {
         //create a chat in chats collection
         await setDoc(doc(db, "chats", combinedId), { messages: [] });
@@ -87,12 +82,6 @@ const Search = () => {
           [combinedId + ".date"]: serverTimestamp(),
         });
       }
-
-    
-       
-
-       
-    
     } catch (err) {}
     setUser(null);
     setUsername("");

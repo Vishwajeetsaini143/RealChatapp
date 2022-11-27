@@ -10,7 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
   const handelSubmit = async (e) => {
     e.preventDefault();
-    alert("click");
+    // alert("click");
     // console.log(e.target[0].value)
 
     const email = e.target[0].value;
@@ -39,7 +39,7 @@ const Login = () => {
           {err && <span>Something went wrong</span>}
         </form>
         <p>
-          you do have an account?<Link to="/register">Register</Link>{" "}
+          you do have an account?<Link to="/register">Register</Link>
         </p>
       </div>
     </div>
