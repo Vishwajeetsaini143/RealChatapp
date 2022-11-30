@@ -32,8 +32,8 @@ const Login = () => {
           <span className="title">Login</span>
         </div>
         <form onSubmit={handelSubmit}>
-          <input type="email" placeholder="email" />
-          <input type="password" placeholder="password" />
+          <input type="email" placeholder="email" required />
+          <input type="password" placeholder="password" required />
 
           <button>Login</button>
           {err && <span>Something went wrong</span>}

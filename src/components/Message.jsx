@@ -12,8 +12,8 @@ const Message = ({messages}) => {
   useEffect(() => {
     ref.current?.scrollIntoView({behavior:"smooth"})
   }, [messages])
-  console.log("msg",messages)
-  const time = new Date(messages?.date.seconds* 1000).toLocaleTimeString().slice(0,5);
+  // console.log("msg",messages)
+  const time = new Date(messages?.date.seconds* 1000).toLocaleTimeString().slice(0,4);
   
   
   return (

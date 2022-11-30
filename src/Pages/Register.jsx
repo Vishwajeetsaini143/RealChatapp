@@ -32,7 +32,7 @@ const Register = () => {
 
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
-      console.log("res", res);
+      // console.log("res", res);
 
       // const storage = getStorage();
       const storageRef = ref(storage, displayName);
@@ -73,10 +73,10 @@ const Register = () => {
           <span className="title">Register</span>
         </div>
         <form onSubmit={handelSubmit}>
-          <input type="text" placeholder="display name" />
-          <input type="email" placeholder="email" />
-          <input type="password" placeholder="password" />
-          <input style={{ display: "none" }} type="file" id="file" />
+          <input type="name" placeholder="display name"  required/>
+          <input type="email" placeholder="email" required/>
+          <input type="password" placeholder="password" required />
+          <input style={{ display: "none" }} type="file" id="file" required />
           <label htmlFor="file">
             <FcGallery className="icon" />
             <span>Add an avatar</span>

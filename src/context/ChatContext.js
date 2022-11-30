@@ -5,6 +5,7 @@ import { useReducer } from "react";
 export const ChatContext = createContext();
 export const ChatContextProvider = ({ children }) => {
   const { currentUser } = useContext(AuthContext);
+  console.log("cuurentuser",currentUser)
   const INITIAL_STATE = {
     chatId: "null",
     user: {},
@@ -34,6 +35,7 @@ export const ChatContextProvider = ({ children }) => {
     }
   };
   const [state, dispatch] = useReducer(chatReducer, INITIAL_STATE);
+  console.log("state",state)
   return (
     <ChatContext.Provider value={{ data: state, dispatch}}>
       {children}

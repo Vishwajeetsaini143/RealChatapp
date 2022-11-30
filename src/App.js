@@ -15,7 +15,7 @@ import { AuthContext } from "./context/AuthContext";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
-  console.log("user", currentUser);
+  // console.log("user", currentUser);
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
       return <Navigate to="/register" />;

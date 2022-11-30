@@ -6,7 +6,7 @@ import { ChatContext } from "../context/ChatContext";
 import { AuthContext } from "../context/AuthContext";
 import { useContext } from "react";
 import { useState } from "react";
-import VoiceToText from "../components/VoiceToText"
+// import VoiceToText from "../components/VoiceToText"
 import {
   arrayUnion,
   doc,
